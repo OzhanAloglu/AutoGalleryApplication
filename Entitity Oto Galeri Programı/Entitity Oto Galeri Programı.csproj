@@ -1,0 +1,381 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C10E86AE-AF29-4F39-B8F3-EFB5C9E927EF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Entitity_Oto_Galeri_Programı</RootNamespace>
+    <AssemblyName>Entitity Oto Galeri Programı</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\..\..\Users\User\Desktop\OtoGaleriOtomasyonuÇıktı\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AraçEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AraçEkle.Designer.cs">
+      <DependentUpon>AraçEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AraçGüncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AraçGüncelle.Designer.cs">
+      <DependentUpon>AraçGüncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Araçlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Araçlar.Designer.cs">
+      <DependentUpon>Araçlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AraçSil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AraçSil.Designer.cs">
+      <DependentUpon>AraçSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kiralıkaraclartablosu_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="kiralıkaracprocedure_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="KiralıkAraçlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KiralıkAraçlar.Designer.cs">
+      <DependentUpon>KiralıkAraçlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="MüşteriBilgileriGüncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MüşteriBilgileriGüncelle.Designer.cs">
+      <DependentUpon>MüşteriBilgileriGüncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MüşteriListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MüşteriListesi.Designer.cs">
+      <DependentUpon>MüşteriListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MüşteriSeçimi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MüşteriSeçimi.Designer.cs">
+      <DependentUpon>MüşteriSeçimi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MüşteriSilme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MüşteriSilme.Designer.cs">
+      <DependentUpon>MüşteriSilme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelEkleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelEkleme.Designer.cs">
+      <DependentUpon>PersonelEkleme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelGüncelle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelGüncelle.Designer.cs">
+      <DependentUpon>PersonelGüncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelListesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelListesi.Designer.cs">
+      <DependentUpon>PersonelListesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PersonelSilme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonelSilme.Designer.cs">
+      <DependentUpon>PersonelSilme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RaporYazdır.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RaporYazdır.Designer.cs">
+      <DependentUpon>RaporYazdır.cs</DependentUpon>
+    </Compile>
+    <Compile Include="satılıkaracprocedure_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SatılıkAraçlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SatılıkAraçlar.Designer.cs">
+      <DependentUpon>SatılıkAraçlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Seçim Ekranı.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Seçim Ekranı.Designer.cs">
+      <DependentUpon>Seçim Ekranı.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sozlesme_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sysdiagrams.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="sözlesme2_Result.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Sözleşme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sözleşme.Designer.cs">
+      <DependentUpon>Sözleşme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TBLARAÇLAR.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBLKAYITLAR.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBLKULLANICILAR.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBLMÜSTERİLER.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBLPERSONELLER.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBLSOZLESME.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="TBLŞUBELER.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="YeniMüşteriEkleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="YeniMüşteriEkleme.Designer.cs">
+      <DependentUpon>YeniMüşteriEkleme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Şube Güncelleme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Şube Güncelleme.Designer.cs">
+      <DependentUpon>Şube Güncelleme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ŞubeEkle.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ŞubeEkle.Designer.cs">
+      <DependentUpon>ŞubeEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Şubeler.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Şubeler.Designer.cs">
+      <DependentUpon>Şubeler.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ŞubeSilme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ŞubeSilme.Designer.cs">
+      <DependentUpon>ŞubeSilme.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AraçEkle.resx">
+      <DependentUpon>AraçEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AraçGüncelle.resx">
+      <DependentUpon>AraçGüncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Araçlar.resx">
+      <DependentUpon>Araçlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AraçSil.resx">
+      <DependentUpon>AraçSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KiralıkAraçlar.resx">
+      <DependentUpon>KiralıkAraçlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MüşteriBilgileriGüncelle.resx">
+      <DependentUpon>MüşteriBilgileriGüncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MüşteriListesi.resx">
+      <DependentUpon>MüşteriListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MüşteriSeçimi.resx">
+      <DependentUpon>MüşteriSeçimi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MüşteriSilme.resx">
+      <DependentUpon>MüşteriSilme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelEkleme.resx">
+      <DependentUpon>PersonelEkleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelGüncelle.resx">
+      <DependentUpon>PersonelGüncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelListesi.resx">
+      <DependentUpon>PersonelListesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonelSilme.resx">
+      <DependentUpon>PersonelSilme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="RaporYazdır.resx">
+      <DependentUpon>RaporYazdır.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SatılıkAraçlar.resx">
+      <DependentUpon>SatılıkAraçlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seçim Ekranı.resx">
+      <DependentUpon>Seçim Ekranı.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sözleşme.resx">
+      <DependentUpon>Sözleşme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="YeniMüşteriEkleme.resx">
+      <DependentUpon>YeniMüşteriEkleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Şube Güncelleme.resx">
+      <DependentUpon>Şube Güncelleme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ŞubeEkle.resx">
+      <DependentUpon>ŞubeEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Şubeler.resx">
+      <DependentUpon>Şubeler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ŞubeSilme.resx">
+      <DependentUpon>ŞubeSilme.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="bin\Debug\Entitity Oto Galeri Programı.exe.config" />
+    <EntityDeploy Include="Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Entitity Oto Galeri Programı.exe" />
+    <Content Include="bin\Debug\Entitity Oto Galeri Programı.pdb" />
+    <Content Include="bin\Debug\EntityFramework.dll" />
+    <Content Include="bin\Debug\EntityFramework.SqlServer.dll" />
+    <Content Include="bin\Debug\EntityFramework.SqlServer.xml" />
+    <Content Include="bin\Debug\EntityFramework.xml" />
+    <Content Include="Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\img\" />
+    <Folder Include="bin\Release\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

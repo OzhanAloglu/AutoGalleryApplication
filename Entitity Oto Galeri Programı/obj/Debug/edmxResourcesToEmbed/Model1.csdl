@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="OtoGaleriOtomasyonuModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="TBLARAÇLAR">
+    <Key>
+      <PropertyRef Name="AraçNo" />
+    </Key>
+    <Property Name="AraçNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AraçFiyat" Type="Int32" />
+    <Property Name="AraçMarka" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AraçModel" Type="Int32" />
+    <Property Name="AraçTip" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AraçVites" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AraçPaket" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AraçRenk" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AraçŞubeNo" Type="Int32" />
+    <Property Name="AraçDurum" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AraçFoto" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="TBLŞUBELER" Relationship="Self.FK_TBLARAÇLAR_TBLŞUBELER" FromRole="TBLARAÇLAR" ToRole="TBLŞUBELER" />
+    <NavigationProperty Name="TBLSOZLESME" Relationship="OtoGaleriOtomasyonuModel.FK_TBLSOZLESME_TBLARAÇLAR" FromRole="TBLARAÇLAR" ToRole="TBLSOZLESME" />
+  </EntityType>
+  <EntityType Name="TBLKAYITLAR">
+    <Key>
+      <PropertyRef Name="KayıtID" />
+    </Key>
+    <Property Name="KayıtID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Kullanıcıİsim" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="KullanıcıSoyisim" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="KullanıcıNo" Type="Int32" />
+    <NavigationProperty Name="TBLKULLANICILAR" Relationship="Self.FK_TBLKAYITLAR_TBLKULLANICILAR" FromRole="TBLKAYITLAR" ToRole="TBLKULLANICILAR" />
+  </EntityType>
+  <EntityType Name="TBLKULLANICILAR">
+    <Key>
+      <PropertyRef Name="KullanıcıNo" />
+    </Key>
+    <Property Name="KullanıcıNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KullanıcıID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="KullanıcıŞifre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="TBLKAYITLAR" Relationship="Self.FK_TBLKAYITLAR_TBLKULLANICILAR" FromRole="TBLKULLANICILAR" ToRole="TBLKAYITLAR" />
+  </EntityType>
+  <EntityType Name="TBLMÜSTERİLER">
+    <Key>
+      <PropertyRef Name="MüşteriNo" />
+    </Key>
+    <Property Name="MüşteriNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MüşteriAd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MüşteriSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MüşteriMail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MüşteriTelefon" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MüşteriAdres" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="TBLSOZLESME" Relationship="OtoGaleriOtomasyonuModel.FK_TBLSOZLESME_TBLMÜSTERİLER" FromRole="TBLMÜSTERİLER" ToRole="TBLSOZLESME" />
+  </EntityType>
+  <EntityType Name="TBLPERSONELLER">
+    <Key>
+      <PropertyRef Name="PersonelNo" />
+    </Key>
+    <Property Name="PersonelNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PersonelAd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PersonelSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PersonelYas" Type="Int32" />
+    <Property Name="PersonelTc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PersonelMail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PersonelTelefon" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PersonelAdres" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="PersonelŞubeNo" Type="Int32" />
+    <NavigationProperty Name="TBLŞUBELER" Relationship="Self.FK_TBLPERSONELLER_TBLŞUBELER" FromRole="TBLPERSONELLER" ToRole="TBLŞUBELER" />
+    <NavigationProperty Name="TBLSOZLESME" Relationship="OtoGaleriOtomasyonuModel.FK_TBLSOZLESME_TBLPERSONELLER" FromRole="TBLPERSONELLER" ToRole="TBLSOZLESME" />
+  </EntityType>
+  <EntityType Name="TBLŞUBELER">
+    <Key>
+      <PropertyRef Name="ŞubeNo" />
+    </Key>
+    <Property Name="ŞubeNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ŞubeAdı" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ŞubePersoneller" Type="Int32" />
+    <Property Name="ŞubeAdresi" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="TBLARAÇLAR" Relationship="Self.FK_TBLARAÇLAR_TBLŞUBELER" FromRole="TBLŞUBELER" ToRole="TBLARAÇLAR" />
+    <NavigationProperty Name="TBLPERSONELLER" Relationship="Self.FK_TBLPERSONELLER_TBLŞUBELER" FromRole="TBLŞUBELER" ToRole="TBLPERSONELLER" />
+    <NavigationProperty Name="TBLSOZLESME" Relationship="OtoGaleriOtomasyonuModel.FK_TBLSOZLESME_TBLŞUBELER" FromRole="TBLŞUBELER" ToRole="TBLSOZLESME" />
+  </EntityType>
+  <Association Name="FK_TBLARAÇLAR_TBLŞUBELER">
+    <End Role="TBLŞUBELER" Type="Self.TBLŞUBELER" Multiplicity="0..1" />
+    <End Role="TBLARAÇLAR" Type="Self.TBLARAÇLAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBLŞUBELER">
+        <PropertyRef Name="ŞubeNo" />
+      </Principal>
+      <Dependent Role="TBLARAÇLAR">
+        <PropertyRef Name="AraçŞubeNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBLKAYITLAR_TBLKULLANICILAR">
+    <End Role="TBLKULLANICILAR" Type="Self.TBLKULLANICILAR" Multiplicity="0..1" />
+    <End Role="TBLKAYITLAR" Type="Self.TBLKAYITLAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBLKULLANICILAR">
+        <PropertyRef Name="KullanıcıNo" />
+      </Principal>
+      <Dependent Role="TBLKAYITLAR">
+        <PropertyRef Name="KullanıcıNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBLPERSONELLER_TBLŞUBELER">
+    <End Role="TBLŞUBELER" Type="Self.TBLŞUBELER" Multiplicity="0..1" />
+    <End Role="TBLPERSONELLER" Type="Self.TBLPERSONELLER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBLŞUBELER">
+        <PropertyRef Name="ŞubeNo" />
+      </Principal>
+      <Dependent Role="TBLPERSONELLER">
+        <PropertyRef Name="PersonelŞubeNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="OtoGaleriOtomasyonuEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="TBLARAÇLAR" EntityType="Self.TBLARAÇLAR" />
+    <EntitySet Name="TBLKAYITLAR" EntityType="Self.TBLKAYITLAR" />
+    <EntitySet Name="TBLKULLANICILAR" EntityType="Self.TBLKULLANICILAR" />
+    <EntitySet Name="TBLMÜSTERİLER" EntityType="Self.TBLMÜSTERİLER" />
+    <EntitySet Name="TBLPERSONELLER" EntityType="Self.TBLPERSONELLER" />
+    <EntitySet Name="TBLŞUBELER" EntityType="Self.TBLŞUBELER" />
+    <AssociationSet Name="FK_TBLARAÇLAR_TBLŞUBELER" Association="Self.FK_TBLARAÇLAR_TBLŞUBELER">
+      <End Role="TBLŞUBELER" EntitySet="TBLŞUBELER" />
+      <End Role="TBLARAÇLAR" EntitySet="TBLARAÇLAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBLKAYITLAR_TBLKULLANICILAR" Association="Self.FK_TBLKAYITLAR_TBLKULLANICILAR">
+      <End Role="TBLKULLANICILAR" EntitySet="TBLKULLANICILAR" />
+      <End Role="TBLKAYITLAR" EntitySet="TBLKAYITLAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBLPERSONELLER_TBLŞUBELER" Association="Self.FK_TBLPERSONELLER_TBLŞUBELER">
+      <End Role="TBLŞUBELER" EntitySet="TBLŞUBELER" />
+      <End Role="TBLPERSONELLER" EntitySet="TBLPERSONELLER" />
+    </AssociationSet>
+    <EntitySet Name="TBLSOZLESME" EntityType="OtoGaleriOtomasyonuModel.TBLSOZLESME" />
+    <AssociationSet Name="FK_TBLSOZLESME_TBLARAÇLAR" Association="OtoGaleriOtomasyonuModel.FK_TBLSOZLESME_TBLARAÇLAR">
+      <End Role="TBLARAÇLAR" EntitySet="TBLARAÇLAR" />
+      <End Role="TBLSOZLESME" EntitySet="TBLSOZLESME" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBLSOZLESME_TBLMÜSTERİLER" Association="OtoGaleriOtomasyonuModel.FK_TBLSOZLESME_TBLMÜSTERİLER">
+      <End Role="TBLMÜSTERİLER" EntitySet="TBLMÜSTERİLER" />
+      <End Role="TBLSOZLESME" EntitySet="TBLSOZLESME" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBLSOZLESME_TBLPERSONELLER" Association="OtoGaleriOtomasyonuModel.FK_TBLSOZLESME_TBLPERSONELLER">
+      <End Role="TBLPERSONELLER" EntitySet="TBLPERSONELLER" />
+      <End Role="TBLSOZLESME" EntitySet="TBLSOZLESME" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBLSOZLESME_TBLŞUBELER" Association="OtoGaleriOtomasyonuModel.FK_TBLSOZLESME_TBLŞUBELER">
+      <End Role="TBLŞUBELER" EntitySet="TBLŞUBELER" />
+      <End Role="TBLSOZLESME" EntitySet="TBLSOZLESME" />
+    </AssociationSet>
+    <FunctionImport Name="sozlesme" ReturnType="Collection(OtoGaleriOtomasyonuModel.sozlesme_Result)" />
+    <FunctionImport Name="sözlesme2" ReturnType="Collection(OtoGaleriOtomasyonuModel.sözlesme2_Result)" />
+    <FunctionImport Name="araclar" ReturnType="Collection(String)" />
+    <FunctionImport Name="kiralıkaracprocedure" ReturnType="Collection(OtoGaleriOtomasyonuModel.kiralıkaracprocedure_Result)" />
+    <FunctionImport Name="kiralıkaraclartablosu" ReturnType="Collection(OtoGaleriOtomasyonuModel.kiralıkaraclartablosu_Result)" />
+    <FunctionImport Name="satılıkaracprocedure" ReturnType="Collection(OtoGaleriOtomasyonuModel.satılıkaracprocedure_Result)" />
+  </EntityContainer>
+  <EntityType Name="TBLSOZLESME">
+    <Key>
+      <PropertyRef Name="SözleşmeNo" />
+    </Key>
+    <Property Name="SözleşmeNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MüşteriNo" Type="Int32" />
+    <Property Name="PersonelNo" Type="Int32" />
+    <Property Name="AraçNo" Type="Int32" />
+    <Property Name="ŞubeNo" Type="Int32" />
+    <Property Name="İslem" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ToplamFiyat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="QRKod" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TBLARAÇLAR" Relationship="OtoGaleriOtomasyonuModel.FK_TBLSOZLESME_TBLARAÇLAR" FromRole="TBLSOZLESME" ToRole="TBLARAÇLAR" />
+    <NavigationProperty Name="TBLMÜSTERİLER" Relationship="OtoGaleriOtomasyonuModel.FK_TBLSOZLESME_TBLMÜSTERİLER" FromRole="TBLSOZLESME" ToRole="TBLMÜSTERİLER" />
+    <NavigationProperty Name="TBLPERSONELLER" Relationship="OtoGaleriOtomasyonuModel.FK_TBLSOZLESME_TBLPERSONELLER" FromRole="TBLSOZLESME" ToRole="TBLPERSONELLER" />
+    <NavigationProperty Name="TBLŞUBELER" Relationship="OtoGaleriOtomasyonuModel.FK_TBLSOZLESME_TBLŞUBELER" FromRole="TBLSOZLESME" ToRole="TBLŞUBELER" />
+  </EntityType>
+  <Association Name="FK_TBLSOZLESME_TBLARAÇLAR">
+    <End Type="OtoGaleriOtomasyonuModel.TBLARAÇLAR" Role="TBLARAÇLAR" Multiplicity="0..1" />
+    <End Type="OtoGaleriOtomasyonuModel.TBLSOZLESME" Role="TBLSOZLESME" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBLARAÇLAR">
+        <PropertyRef Name="AraçNo" />
+      </Principal>
+      <Dependent Role="TBLSOZLESME">
+        <PropertyRef Name="AraçNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBLSOZLESME_TBLMÜSTERİLER">
+    <End Type="OtoGaleriOtomasyonuModel.TBLMÜSTERİLER" Role="TBLMÜSTERİLER" Multiplicity="0..1" />
+    <End Type="OtoGaleriOtomasyonuModel.TBLSOZLESME" Role="TBLSOZLESME" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBLMÜSTERİLER">
+        <PropertyRef Name="MüşteriNo" />
+      </Principal>
+      <Dependent Role="TBLSOZLESME">
+        <PropertyRef Name="MüşteriNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBLSOZLESME_TBLPERSONELLER">
+    <End Type="OtoGaleriOtomasyonuModel.TBLPERSONELLER" Role="TBLPERSONELLER" Multiplicity="0..1" />
+    <End Type="OtoGaleriOtomasyonuModel.TBLSOZLESME" Role="TBLSOZLESME" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBLPERSONELLER">
+        <PropertyRef Name="PersonelNo" />
+      </Principal>
+      <Dependent Role="TBLSOZLESME">
+        <PropertyRef Name="PersonelNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBLSOZLESME_TBLŞUBELER">
+    <End Type="OtoGaleriOtomasyonuModel.TBLŞUBELER" Role="TBLŞUBELER" Multiplicity="0..1" />
+    <End Type="OtoGaleriOtomasyonuModel.TBLSOZLESME" Role="TBLSOZLESME" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBLŞUBELER">
+        <PropertyRef Name="ŞubeNo" />
+      </Principal>
+      <Dependent Role="TBLSOZLESME">
+        <PropertyRef Name="ŞubeNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <ComplexType Name="sozlesme_Result">
+    <Property Type="String" Name="AraçMarka" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="AraçModel" Nullable="true" />
+    <Property Type="String" Name="AraçPaket" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="AraçVites" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="AraçRenk" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="AraçDurum" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="PersonelNo" Nullable="false" />
+    <Property Type="String" Name="Personel_Ad_Soyad" Nullable="true" MaxLength="101" />
+    <Property Type="String" Name="PersonelTc" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PersonelMail" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="ŞubeNo" Nullable="false" />
+    <Property Type="String" Name="ŞubeAdı" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="sözlesme2_Result">
+    <Property Type="String" Name="AraçMarka" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="AraçModel" Nullable="true" />
+    <Property Type="String" Name="AraçPaket" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="AraçVites" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="AraçRenk" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="AraçDurum" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="PersonelNo" Nullable="false" />
+    <Property Type="String" Name="PersonelAd" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PersonelSoyad" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PersonelTc" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PersonelMail" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="ŞubeNo" Nullable="false" />
+    <Property Type="String" Name="ŞubeAdı" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="kiralıkaracprocedure_Result">
+    <Property Type="String" Name="AraçMarka" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="AraçModel" Nullable="true" />
+    <Property Type="String" Name="AraçPaket" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="AraçVites" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="AraçRenk" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="AraçDurum" Nullable="false" MaxLength="7" />
+    <Property Type="Int32" Name="PersonelNo" Nullable="false" />
+    <Property Type="String" Name="PersonelAd" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PersonelSoyad" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PersonelTc" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PersonelMail" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="ŞubeNo" Nullable="false" />
+    <Property Type="String" Name="ŞubeAdı" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="kiralıkaraclartablosu_Result">
+    <Property Type="String" Name="AraçMarka" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="AraçModel" Nullable="true" />
+    <Property Type="String" Name="AraçPaket" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="AraçVites" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="AraçRenk" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="AraçDurum" Nullable="false" MaxLength="7" />
+    <Property Type="Int32" Name="AraçFiyat" Nullable="true" />
+    <Property Type="Int32" Name="PersonelNo" Nullable="false" />
+    <Property Type="String" Name="PersonelAd" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PersonelSoyad" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PersonelTc" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PersonelMail" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="ŞubeNo" Nullable="false" />
+    <Property Type="String" Name="ŞubeAdı" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="satılıkaracprocedure_Result">
+    <Property Type="String" Name="AraçMarka" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="AraçModel" Nullable="true" />
+    <Property Type="String" Name="AraçPaket" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="AraçVites" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="AraçRenk" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="AraçDurum" Nullable="false" MaxLength="7" />
+    <Property Type="Int32" Name="AraçFiyat" Nullable="true" />
+    <Property Type="Int32" Name="PersonelNo" Nullable="false" />
+    <Property Type="String" Name="PersonelAd" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PersonelSoyad" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PersonelTc" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="PersonelMail" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="ŞubeNo" Nullable="false" />
+    <Property Type="String" Name="ŞubeAdı" Nullable="true" MaxLength="50" />
+  </ComplexType>
+</Schema>

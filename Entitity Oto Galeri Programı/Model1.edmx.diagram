@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="aa27f17f92a2428fa026237601bd2f3a" Name="Diagram1" ZoomLevel="73">
+        <EntityTypeShape EntityType="OtoGaleriOtomasyonuModel.sysdiagrams" Width="1.5" PointX="12.25" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="OtoGaleriOtomasyonuModel.TBLARAÇLAR" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="OtoGaleriOtomasyonuModel.TBLKAYITLAR" Width="1.5" PointX="8" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="OtoGaleriOtomasyonuModel.TBLKULLANICILAR" Width="1.5" PointX="5.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="OtoGaleriOtomasyonuModel.TBLMÜSTERİLER" Width="1.5" PointX="5.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="OtoGaleriOtomasyonuModel.TBLPERSONELLER" Width="1.5" PointX="2.625" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="OtoGaleriOtomasyonuModel.TBLŞUBELER" Width="1.5" PointX="0.75" PointY="3.625" IsExpanded="true" />
+        <AssociationConnector Association="OtoGaleriOtomasyonuModel.FK_TBLARAÇLAR_TBLŞUBELER" ManuallyRouted="false" />
+        <AssociationConnector Association="OtoGaleriOtomasyonuModel.FK_TBLKAYITLAR_TBLKULLANICILAR" ManuallyRouted="false" />
+        <AssociationConnector Association="OtoGaleriOtomasyonuModel.FK_TBLPERSONELLER_TBLŞUBELER" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="OtoGaleriOtomasyonuModel.TBLSOZLESME" Width="1.5" PointX="8" PointY="4.5" />
+        <AssociationConnector Association="OtoGaleriOtomasyonuModel.FK_TBLSOZLESME_TBLARAÇLAR" />
+        <AssociationConnector Association="OtoGaleriOtomasyonuModel.FK_TBLSOZLESME_TBLMÜSTERİLER" />
+        <AssociationConnector Association="OtoGaleriOtomasyonuModel.FK_TBLSOZLESME_TBLPERSONELLER" />
+        <AssociationConnector Association="OtoGaleriOtomasyonuModel.FK_TBLSOZLESME_TBLŞUBELER" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

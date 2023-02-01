@@ -1,0 +1,71 @@
+C:\C#\Çalışmalar\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\bin\Debug\Entitity Oto Galeri Programı.exe.config
+C:\C#\Çalışmalar\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\bin\Debug\Entitity Oto Galeri Programı.exe
+C:\C#\Çalışmalar\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\bin\Debug\Entitity Oto Galeri Programı.pdb
+C:\C#\Çalışmalar\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity Oto Galeri Programı.csproj.AssemblyReference.cache
+C:\C#\Çalışmalar\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity Oto Galeri Programı.csproj.SuggestedBindingRedirects.cache
+C:\C#\Çalışmalar\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity_Oto_Galeri_Programı.Form1.resources
+C:\C#\Çalışmalar\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity_Oto_Galeri_Programı.Properties.Resources.resources
+C:\C#\Çalışmalar\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity Oto Galeri Programı.csproj.GenerateResource.cache
+C:\C#\Çalışmalar\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity Oto Galeri Programı.csproj.CoreCompileInputs.cache
+C:\C#\Çalışmalar\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity Oto Galeri Programı.exe
+C:\C#\Çalışmalar\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity Oto Galeri Programı.pdb
+C:\C#\Çalışmalar\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\bin\Debug\EntityFramework.xml
+C:\C#\Çalışmalar\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\bin\Debug\EntityFramework.SqlServer.xml
+C:\C#\Çalışmalar\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity_Oto_Galeri_Programı.Seçim_Ekranı.resources
+C:\C#\Çalışmalar\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity Oto Galeri Programı.csproj.CopyComplete
+C:\C#\Çalışmalar\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity_Oto_Galeri_Programı.AraçGüncelle.resources
+C:\C#\Çalışmalar\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity_Oto_Galeri_Programı.Araçlar.resources
+C:\C#\Çalışmalar\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity_Oto_Galeri_Programı.KiralıkAraçlar.resources
+C:\C#\Çalışmalar\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity_Oto_Galeri_Programı.MüşteriListesi.resources
+C:\C#\Çalışmalar\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity_Oto_Galeri_Programı.PersonelEkleme.resources
+C:\C#\Çalışmalar\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity_Oto_Galeri_Programı.PersonelGüncelle.resources
+C:\C#\Çalışmalar\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity_Oto_Galeri_Programı.PersonelListesi.resources
+C:\C#\Çalışmalar\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity_Oto_Galeri_Programı.SatılıkAraçlar.resources
+C:\C#\Çalışmalar\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity_Oto_Galeri_Programı.YeniMüşteriEkleme.resources
+C:\C#\Çalışmalar\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity_Oto_Galeri_Programı.Şubeler.resources
+C:\C#\Çalışmalar\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity_Oto_Galeri_Programı.MüşteriBilgileriGüncelle.resources
+C:\C#\Çalışmalar\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity_Oto_Galeri_Programı.MüşteriSilme.resources
+C:\C#\Çalışmalar\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity_Oto_Galeri_Programı.AraçSil.resources
+C:\C#\Çalışmalar\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity_Oto_Galeri_Programı.PersonelSilme.resources
+C:\C#\Çalışmalar\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity_Oto_Galeri_Programı.Şube_Güncelleme.resources
+C:\C#\Çalışmalar\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity_Oto_Galeri_Programı.ŞubeEkle.resources
+C:\C#\Çalışmalar\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity_Oto_Galeri_Programı.ŞubeSilme.resources
+C:\C#\Çalışmalar\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity_Oto_Galeri_Programı.Sözleşme.resources
+C:\C#\Çalışmalar\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity_Oto_Galeri_Programı.MüşteriSeçimi.resources
+C:\C#\Çalışmalar\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity_Oto_Galeri_Programı.RaporYazdır.resources
+C:\Users\User\Desktop\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\bin\Debug\Entitity Oto Galeri Programı.exe.config
+C:\Users\User\Desktop\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\bin\Debug\Entitity Oto Galeri Programı.exe
+C:\Users\User\Desktop\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\bin\Debug\Entitity Oto Galeri Programı.pdb
+C:\Users\User\Desktop\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\bin\Debug\EntityFramework.xml
+C:\Users\User\Desktop\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\User\Desktop\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity Oto Galeri Programı.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity Oto Galeri Programı.csproj.SuggestedBindingRedirects.cache
+C:\Users\User\Desktop\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity_Oto_Galeri_Programı.AraçGüncelle.resources
+C:\Users\User\Desktop\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity_Oto_Galeri_Programı.Araçlar.resources
+C:\Users\User\Desktop\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity_Oto_Galeri_Programı.AraçSil.resources
+C:\Users\User\Desktop\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity_Oto_Galeri_Programı.Form1.resources
+C:\Users\User\Desktop\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity_Oto_Galeri_Programı.KiralıkAraçlar.resources
+C:\Users\User\Desktop\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity_Oto_Galeri_Programı.MüşteriBilgileriGüncelle.resources
+C:\Users\User\Desktop\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity_Oto_Galeri_Programı.MüşteriListesi.resources
+C:\Users\User\Desktop\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity_Oto_Galeri_Programı.MüşteriSeçimi.resources
+C:\Users\User\Desktop\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity_Oto_Galeri_Programı.MüşteriSilme.resources
+C:\Users\User\Desktop\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity_Oto_Galeri_Programı.PersonelEkleme.resources
+C:\Users\User\Desktop\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity_Oto_Galeri_Programı.PersonelGüncelle.resources
+C:\Users\User\Desktop\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity_Oto_Galeri_Programı.PersonelListesi.resources
+C:\Users\User\Desktop\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity_Oto_Galeri_Programı.PersonelSilme.resources
+C:\Users\User\Desktop\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity_Oto_Galeri_Programı.Properties.Resources.resources
+C:\Users\User\Desktop\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity_Oto_Galeri_Programı.RaporYazdır.resources
+C:\Users\User\Desktop\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity_Oto_Galeri_Programı.SatılıkAraçlar.resources
+C:\Users\User\Desktop\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity_Oto_Galeri_Programı.Seçim_Ekranı.resources
+C:\Users\User\Desktop\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity_Oto_Galeri_Programı.Sözleşme.resources
+C:\Users\User\Desktop\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity_Oto_Galeri_Programı.YeniMüşteriEkleme.resources
+C:\Users\User\Desktop\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity_Oto_Galeri_Programı.Şube_Güncelleme.resources
+C:\Users\User\Desktop\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity_Oto_Galeri_Programı.ŞubeEkle.resources
+C:\Users\User\Desktop\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity_Oto_Galeri_Programı.Şubeler.resources
+C:\Users\User\Desktop\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity_Oto_Galeri_Programı.ŞubeSilme.resources
+C:\Users\User\Desktop\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity Oto Galeri Programı.csproj.GenerateResource.cache
+C:\Users\User\Desktop\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity Oto Galeri Programı.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity Oto Galeri Programı.csproj.CopyComplete
+C:\Users\User\Desktop\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity Oto Galeri Programı.exe
+C:\Users\User\Desktop\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity Oto Galeri Programı.pdb
+C:\Users\User\Desktop\Entitity Oto Galeri Programı\Entitity Oto Galeri Programı\obj\Debug\Entitity_Oto_Galeri_Programı.AraçEkle.resources

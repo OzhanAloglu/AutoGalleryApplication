@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="OtoGaleriOtomasyonuModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TBLARAÇLAR">
+    <Key>
+      <PropertyRef Name="AraçNo" />
+    </Key>
+    <Property Name="AraçNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AraçFiyat" Type="int" />
+    <Property Name="AraçMarka" Type="varchar" MaxLength="50" />
+    <Property Name="AraçModel" Type="int" />
+    <Property Name="AraçTip" Type="varchar" MaxLength="50" />
+    <Property Name="AraçVites" Type="varchar" MaxLength="50" />
+    <Property Name="AraçPaket" Type="varchar" MaxLength="50" />
+    <Property Name="AraçRenk" Type="varchar" MaxLength="50" />
+    <Property Name="AraçŞubeNo" Type="int" />
+    <Property Name="AraçDurum" Type="varchar" MaxLength="50" />
+    <Property Name="AraçFoto" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="TBLKAYITLAR">
+    <Key>
+      <PropertyRef Name="KayıtID" />
+    </Key>
+    <Property Name="KayıtID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Kullanıcıİsim" Type="varchar" MaxLength="50" />
+    <Property Name="KullanıcıSoyisim" Type="varchar" MaxLength="50" />
+    <Property Name="KullanıcıNo" Type="int" />
+  </EntityType>
+  <EntityType Name="TBLKULLANICILAR">
+    <Key>
+      <PropertyRef Name="KullanıcıNo" />
+    </Key>
+    <Property Name="KullanıcıNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KullanıcıID" Type="varchar" MaxLength="50" />
+    <Property Name="KullanıcıŞifre" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TBLMÜSTERİLER">
+    <Key>
+      <PropertyRef Name="MüşteriNo" />
+    </Key>
+    <Property Name="MüşteriNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MüşteriAd" Type="varchar" MaxLength="50" />
+    <Property Name="MüşteriSoyad" Type="varchar" MaxLength="50" />
+    <Property Name="MüşteriMail" Type="varchar" MaxLength="50" />
+    <Property Name="MüşteriTelefon" Type="varchar" MaxLength="50" />
+    <Property Name="MüşteriAdres" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TBLPERSONELLER">
+    <Key>
+      <PropertyRef Name="PersonelNo" />
+    </Key>
+    <Property Name="PersonelNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PersonelAd" Type="varchar" MaxLength="50" />
+    <Property Name="PersonelSoyad" Type="varchar" MaxLength="50" />
+    <Property Name="PersonelYas" Type="int" />
+    <Property Name="PersonelTc" Type="varchar" MaxLength="50" />
+    <Property Name="PersonelMail" Type="varchar" MaxLength="50" />
+    <Property Name="PersonelTelefon" Type="varchar" MaxLength="50" />
+    <Property Name="PersonelAdres" Type="varchar" MaxLength="100" />
+    <Property Name="PersonelŞubeNo" Type="int" />
+  </EntityType>
+  <EntityType Name="TBLSOZLESME">
+    <Key>
+      <PropertyRef Name="SözleşmeNo" />
+    </Key>
+    <Property Name="SözleşmeNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MüşteriNo" Type="int" />
+    <Property Name="PersonelNo" Type="int" />
+    <Property Name="AraçNo" Type="int" />
+    <Property Name="ŞubeNo" Type="int" />
+    <Property Name="İslem" Type="varchar" MaxLength="50" />
+    <Property Name="ToplamFiyat" Type="varchar" MaxLength="50" />
+    <Property Name="QRKod" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="TBLŞUBELER">
+    <Key>
+      <PropertyRef Name="ŞubeNo" />
+    </Key>
+    <Property Name="ŞubeNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ŞubeAdı" Type="varchar" MaxLength="50" />
+    <Property Name="ŞubePersoneller" Type="int" />
+    <Property Name="ŞubeAdresi" Type="varchar" MaxLength="150" />
+  </EntityType>
+  <Association Name="FK_TBLARAÇLAR_TBLŞUBELER">
+    <End Role="TBLŞUBELER" Type="Self.TBLŞUBELER" Multiplicity="0..1" />
+    <End Role="TBLARAÇLAR" Type="Self.TBLARAÇLAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBLŞUBELER">
+        <PropertyRef Name="ŞubeNo" />
+      </Principal>
+      <Dependent Role="TBLARAÇLAR">
+        <PropertyRef Name="AraçŞubeNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBLKAYITLAR_TBLKULLANICILAR">
+    <End Role="TBLKULLANICILAR" Type="Self.TBLKULLANICILAR" Multiplicity="0..1" />
+    <End Role="TBLKAYITLAR" Type="Self.TBLKAYITLAR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBLKULLANICILAR">
+        <PropertyRef Name="KullanıcıNo" />
+      </Principal>
+      <Dependent Role="TBLKAYITLAR">
+        <PropertyRef Name="KullanıcıNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBLPERSONELLER_TBLŞUBELER">
+    <End Role="TBLŞUBELER" Type="Self.TBLŞUBELER" Multiplicity="0..1" />
+    <End Role="TBLPERSONELLER" Type="Self.TBLPERSONELLER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBLŞUBELER">
+        <PropertyRef Name="ŞubeNo" />
+      </Principal>
+      <Dependent Role="TBLPERSONELLER">
+        <PropertyRef Name="PersonelŞubeNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBLSOZLESME_TBLARAÇLAR">
+    <End Role="TBLARAÇLAR" Type="Self.TBLARAÇLAR" Multiplicity="0..1" />
+    <End Role="TBLSOZLESME" Type="Self.TBLSOZLESME" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBLARAÇLAR">
+        <PropertyRef Name="AraçNo" />
+      </Principal>
+      <Dependent Role="TBLSOZLESME">
+        <PropertyRef Name="AraçNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBLSOZLESME_TBLMÜSTERİLER">
+    <End Role="TBLMÜSTERİLER" Type="Self.TBLMÜSTERİLER" Multiplicity="0..1" />
+    <End Role="TBLSOZLESME" Type="Self.TBLSOZLESME" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBLMÜSTERİLER">
+        <PropertyRef Name="MüşteriNo" />
+      </Principal>
+      <Dependent Role="TBLSOZLESME">
+        <PropertyRef Name="MüşteriNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBLSOZLESME_TBLPERSONELLER">
+    <End Role="TBLPERSONELLER" Type="Self.TBLPERSONELLER" Multiplicity="0..1" />
+    <End Role="TBLSOZLESME" Type="Self.TBLSOZLESME" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBLPERSONELLER">
+        <PropertyRef Name="PersonelNo" />
+      </Principal>
+      <Dependent Role="TBLSOZLESME">
+        <PropertyRef Name="PersonelNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TBLSOZLESME_TBLŞUBELER">
+    <End Role="TBLŞUBELER" Type="Self.TBLŞUBELER" Multiplicity="0..1" />
+    <End Role="TBLSOZLESME" Type="Self.TBLSOZLESME" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TBLŞUBELER">
+        <PropertyRef Name="ŞubeNo" />
+      </Principal>
+      <Dependent Role="TBLSOZLESME">
+        <PropertyRef Name="ŞubeNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="araclar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="kiralıkaraclartablosu" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="kiralıkaracprocedure" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="satılıkaracprocedure" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sözlesme2" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <EntityContainer Name="OtoGaleriOtomasyonuModelStoreContainer">
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBLARAÇLAR" EntityType="Self.TBLARAÇLAR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBLKAYITLAR" EntityType="Self.TBLKAYITLAR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBLKULLANICILAR" EntityType="Self.TBLKULLANICILAR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBLMÜSTERİLER" EntityType="Self.TBLMÜSTERİLER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBLPERSONELLER" EntityType="Self.TBLPERSONELLER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBLSOZLESME" EntityType="Self.TBLSOZLESME" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TBLŞUBELER" EntityType="Self.TBLŞUBELER" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_TBLARAÇLAR_TBLŞUBELER" Association="Self.FK_TBLARAÇLAR_TBLŞUBELER">
+      <End Role="TBLŞUBELER" EntitySet="TBLŞUBELER" />
+      <End Role="TBLARAÇLAR" EntitySet="TBLARAÇLAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBLKAYITLAR_TBLKULLANICILAR" Association="Self.FK_TBLKAYITLAR_TBLKULLANICILAR">
+      <End Role="TBLKULLANICILAR" EntitySet="TBLKULLANICILAR" />
+      <End Role="TBLKAYITLAR" EntitySet="TBLKAYITLAR" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBLPERSONELLER_TBLŞUBELER" Association="Self.FK_TBLPERSONELLER_TBLŞUBELER">
+      <End Role="TBLŞUBELER" EntitySet="TBLŞUBELER" />
+      <End Role="TBLPERSONELLER" EntitySet="TBLPERSONELLER" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBLSOZLESME_TBLARAÇLAR" Association="Self.FK_TBLSOZLESME_TBLARAÇLAR">
+      <End Role="TBLARAÇLAR" EntitySet="TBLARAÇLAR" />
+      <End Role="TBLSOZLESME" EntitySet="TBLSOZLESME" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBLSOZLESME_TBLMÜSTERİLER" Association="Self.FK_TBLSOZLESME_TBLMÜSTERİLER">
+      <End Role="TBLMÜSTERİLER" EntitySet="TBLMÜSTERİLER" />
+      <End Role="TBLSOZLESME" EntitySet="TBLSOZLESME" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBLSOZLESME_TBLPERSONELLER" Association="Self.FK_TBLSOZLESME_TBLPERSONELLER">
+      <End Role="TBLPERSONELLER" EntitySet="TBLPERSONELLER" />
+      <End Role="TBLSOZLESME" EntitySet="TBLSOZLESME" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TBLSOZLESME_TBLŞUBELER" Association="Self.FK_TBLSOZLESME_TBLŞUBELER">
+      <End Role="TBLŞUBELER" EntitySet="TBLŞUBELER" />
+      <End Role="TBLSOZLESME" EntitySet="TBLSOZLESME" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
